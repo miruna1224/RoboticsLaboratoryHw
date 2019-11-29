@@ -21,5 +21,7 @@ d. Remember, working with resistors you can usually vary the value a bit higher 
 # hw 5
   file joystick+display.ino ,
   display_test.mp4
-  
+  ( this video have the same electric scheme as my board but mine does not work)
+  broken.mp4 
+  ( this video is the proof that my display(s) are somehow broken )
   -> use menu from display with joystick
