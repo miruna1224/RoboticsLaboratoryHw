@@ -19,7 +19,7 @@ d. Remember, working with resistors you can usually vary the value a bit higher 
 - manipulation of 7-segments display with joystick
 
 # hw 5
-  file joystick+display.ino
-  display_test.ino
+  file joystick+display.ino ,
+  display_test.mp4
   
   -> use menu from display with joystick
