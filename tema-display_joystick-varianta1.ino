@@ -2,7 +2,7 @@
 
 const int pinX = A0; // Analog input
 const int pinY = A1; // Analog input
-const int pinSW = 6;
+const int pinSW = 10;
 
 
 int valueX = 0;
@@ -24,6 +24,9 @@ int cursorA = 0;
 int cursorB = 0;
 int cursorC = 0;
 int lives = 3;
+int level = 1;
+int score = 0;
+int highscore = 0;
 
 
 
@@ -56,12 +59,11 @@ void setup() {
 
 
 
-int JoystickX(  ){
-  index = 3;
+int JoystickX( int index ){
   if ( !joyMove && valueX > maxTreshold ) {
     index ++;
     joyMove = true;
-    if ( index > 9 )
+    if ( index > 10 )
       index = 0;
     if ( index < 0 )
       index = 9;
@@ -93,18 +95,33 @@ void firstMenu() {
     lcd.setCursor (3, 1);
     delay ( 100 );
     valueSW = digitalRead ( pinSW );
-    Serial.println ( pinSW );
-//    if ( valueSW == LOW )
-//      state = 1;
-//    else state = 0;
-//    if ( state == 1 ){
-//      lcd.clear();
-//      lcd.print ("No. of lives : ");
-//      lcd.print (lives);
-//      delay ( 1000 );
-//      // aici trebuie sa adaugi cod pentru a modifica in timp real nr de vieti
-//      firstMenu();
-//    }
+     // Serial.println ( pinSW );
+    if ( valueSW == LOW )
+      state = 1;
+    else state = 0;
+    if ( state == 1 ){
+      lcd.clear();
+      lcd.blink();
+      lcd.print ("No. of lives : ");
+      lcd.print (lives);
+      delay ( 1000 );
+      do{
+        lcd.clear();
+        valueSW = digitalRead ( pinSW );
+        if ( valueSW == LOW )
+           state = 1;
+         else state = 0;
+        joyMove = false;
+        valueX = 0;
+        valueY = 0;
+        lives = JoystickX( lives );    
+        lcd.print ("No. of lives : ");
+        lcd.print (lives);
+        delay ( 1000 );
+       } while (valueSW == 1);
+       // aici trebuie sa adaugi cod pentru a modifica in timp real nr de vieti
+       firstMenu();
+    }
   }
    else{
     if ( cursorA == 1 ){
@@ -113,14 +130,47 @@ void firstMenu() {
       lcd.setCursor (0, 1);
       lcd.blink();
       lcd.print("   >Level " );
-      lcd.setCursor (3, 1); 
+      lcd.setCursor (3, 1);
+      delay ( 100 );
       valueSW = digitalRead ( pinSW );
+       // Serial.println ( pinSW );
       if ( valueSW == LOW )
         state = 1;
       else state = 0;
       if ( state == 1 ){
-        lcd.clear();
-        lcd.print ("aici e logica"); 
+        do{
+          lcd.clear();
+          valueSW = digitalRead ( pinSW );
+          if ( valueSW == LOW )
+             state = 1;
+           else state = 0;
+          joyMove = false;
+          valueX = 0;
+          valueY = 0;
+          level = millis() / 10000;    
+          lcd.print ("Level : ");
+          lcd.print (level);
+          delay ( 100 );
+         } while (valueSW == 0 && level < 10);
+          valueSW = digitalRead ( pinSW );
+           // Serial.println ( pinSW );
+          if ( valueSW == LOW )
+            state = 1;
+          else state = 0;
+         while( level == 10 && state == 0 ){
+          lcd.clear();
+          lcd.setCursor(0, 0);
+          lcd.print ("Congratulation! You finished the game ");
+          lcd.setCursor (0, 1);
+          lcd.print ("Press Switch Joystick Button to exit" );
+          valueSW = digitalRead ( pinSW );
+           // Serial.println ( pinSW );
+          if ( valueSW == LOW )
+            state = 1;
+          else state = 0;
+         }
+         // aici trebuie sa adaugi cod pentru a modifica in timp real levelul
+         firstMenu();
       }
     }
     else {
@@ -130,46 +180,111 @@ void firstMenu() {
       lcd.blink();
       lcd.print("   >Score");
       lcd.setCursor (3, 1);
-       valueSW = digitalRead ( pinSW );
+      valueSW = digitalRead ( pinSW );
+       // Serial.println ( pinSW );
       if ( valueSW == LOW )
         state = 1;
       else state = 0;
       if ( state == 1 ){
-        lcd.print ("calcul scor");
+        lcd.clear();
+        valueSW = digitalRead ( pinSW );
+        if ( valueSW == LOW )
+           state = 1;
+         else state = 0;
+        if ( valueSW == 1 ){
+          score = level * 3;    
+          lcd.print ("Score : ");
+          lcd.print (score);
+          if (score > highscore )
+            highscore = score;
+          delay ( 1000 );
+        }
+        firstMenu();
       }
     }
    }
   delay ( 100 );
 }
 
+void displayMenu ();
 
 void secondMenu() {
   lcd.clear();
-  lcd.print ( "second" );
+  lcd.setCursor( 0, 0 );
+  lcd.print ( "HighScore : " );
+  lcd.setCursor( 0, 1 );
+  lcd.print( highscore);
+  do{
+    valueSW = digitalRead ( pinSW );
+    // Serial.println ( pinSW );
+    if ( valueSW == LOW )
+      state = 1;
+    else state = 0;
+  } while ( state == 0);
+  
+   valueX = 0;
+   valueY = 0;
+  valueSW = 0;
+  displayMenu();
 }
 
 
 void thirdMenu() {
   lcd.clear();
-  lcd.print ( "third" );
+  lcd.setCursor (0, 0);
+  lcd.print ( " No. of lives : " );
+  lcd.setCursor(1, 7);
+  lcd.print ( lives ); 
+  valueSW = digitalRead ( pinSW );
+  
+  
+   if ( valueSW == LOW )
+        state = 1;
+      else state = 0;
+  if ( state == 1 ){
+    delay (20);
+    do{
+      valueSW = digitalRead ( pinSW );
+       if ( valueSW == LOW )
+        state = 1;
+      else state = 0;
+      joyMove = false;
+      valueX = 0;
+      valueY = 0;
+      valueSW = 0;
+      lives = JoystickX ( lives );
+    } while ( state == 0 );
+  }
+  
+  displayMenu();
 }
 
 
 
 
-void JoystickY2 ( ){
-  if ( !joyMove && valueY > maxTreshold ) {
+void JoystickY_FM ( ){
+   if ( !joyMove && valueY > maxTreshold ) {
+    index ++;
     joyMove = true;
-    cursorA ++;
-    if ( cursorA > 2 )
-      cursorA = 2;
+    if ( index > 9 )
+      index = 0;
+    if ( index < 0 )
+      index = 9;
+    cursorPosition ++;
+    if ( cursorPosition > 2 )
+      cursorPosition = 2;
   }
   if ( !joyMove && valueY < minTreshold ) {
+    index --;
     joyMove = true;
-    cursorA--;
-    if ( cursorA <= 0 )
-      cursorA = 0;
-    else cursorA = 1;
+    if ( index > 9 )
+      index = 0;
+    if ( index < 0 )
+      index = 9;
+    cursorPosition--;
+    if ( cursorPosition <= 0 )
+      cursorPosition = 0;
+    else cursorPosition = 1;
   }
 
   if ( valueY <= maxTreshold && valueY >= minTreshold )
@@ -177,7 +292,6 @@ void JoystickY2 ( ){
     
   if ( joyMove ) 
     firstMenu();
-  delay (200);
 }
 
 
@@ -197,10 +311,13 @@ void displayMenu (){
     if ( valueSW == LOW )
       state = 1;
     else state = 0;
-    if ( state == 1 ){
-      while (true )
-       firstMenu();
-    }
+    while ( state == 1 ){
+        joyMove = false;
+        valueX = 0;
+        valueY = 0;
+        valueSW = 0;
+        JoystickY_FM();
+      }
    }
    else{
     if ( cursorPosition == 1 ){
@@ -214,8 +331,13 @@ void displayMenu (){
       if ( valueSW == LOW )
         state = 1;
       else state = 0;
-      if ( state == 1 )
+      if ( state == 1 ){
+        joyMove = false;
+        valueX = 0;
+        valueY = 0;
+        valueSW = 0;
         secondMenu();
+      }
     }
     else {
       lcd.setCursor (0, 0);
@@ -224,7 +346,7 @@ void displayMenu (){
       lcd.blink();
       lcd.print("   >Settings");
       lcd.setCursor (3, 1);
-       valueSW = digitalRead ( pinSW );
+      valueSW = digitalRead ( pinSW );
       if ( valueSW == LOW )
         state = 1;
       else state = 0;
@@ -285,13 +407,13 @@ void loop() {
 
   lcd.clear();
   displayMenu();
- 
+
   JoystickY(  );
 
-
-  if ( valueSW == LOW )
-    state = 1;
-  else state = 0;
+//
+//  if ( valueSW == LOW )
+//    state = 1;
+//  else state = 0;
 
  
  //// test lcd
@@ -318,8 +440,3 @@ void loop() {
 }
 //
 //
-//To Do:
-//  - trebuie sa refaci joystickY2
-//  - sa refolosesti codul de la joystickY original
-//  - alta metoda pentru a naiva prin meniul de la StartGame
-//  - nu mai merge sa selectezi nimic din "Meniu: " 
