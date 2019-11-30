@@ -25,3 +25,4 @@ d. Remember, working with resistors you can usually vary the value a bit higher 
   broken.mp4 
   ( this video is the proof that my display(s) are somehow broken )
   -> use menu from display with joystick
+  -> final video is made with my code and a "borrowed" wire scheme 
