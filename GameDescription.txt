@@ -1,0 +1,10 @@
+Classical Pac-man game using 2 ( or more) matrixes and one lcd for menu and score :
+  - single player game
+  - clasament ( * )
+  - animation at : 
+      - before game start
+      - game over 
+      - change difficulty,timing, bombs frequency at 20 second ( * )
+  - after all the proprieties are at maximum level, change the game ( * )
+  -  easter eggs ( * )
+  - another display to display a joke at score : by 100 ( * ) 
