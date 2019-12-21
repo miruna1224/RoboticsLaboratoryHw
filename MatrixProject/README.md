@@ -1,3 +1,9 @@
+
+Video for game : 
+	- download from github
+	- see here : https://youtu.be/UiuMEOOBR2g
+
+
 Strange Pacman game : 
 
  	1. ) Representation of matrixes leds :
