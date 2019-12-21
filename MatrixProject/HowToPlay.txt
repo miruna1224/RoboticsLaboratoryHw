@@ -1,0 +1,5 @@
+ - you should use the joystick to navigate in menu and switch button from joystick
+ to select a submenu
+ - in start game -> joystick to move 
+ - in credits and highscore - when0 selected will last enough time to read
+ - in settings -> right or up to change difficulty , left or down more thant 4 seconds to come back to menu

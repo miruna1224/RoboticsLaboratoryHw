@@ -1,0 +1,14 @@
+ - Used : 
+ 	- 2 led matrixes
+	- 2 drivers
+	- 1 lcd
+	- 3 resistors
+	- a lot of cables
+	- 1 joystick
+	- 4 breadboards
+ - Upgrade (maybe ) :
+ 	- loudspeaker
+	- more cables
+	- 1 resistor
+	- leds
+	- buttons
