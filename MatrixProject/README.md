@@ -1,4 +1,5 @@
 Strange Pacman game : 
+
  	1. ) Representation of matrixes leds :
 		- pacman - represented by a blinking point (led )
 		- walls - permanent red leds
