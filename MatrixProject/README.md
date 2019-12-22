@@ -44,9 +44,49 @@ Strange Pacman game :
 			- codes for bigger score in game
 			- funny animations
 			
+			
+			
+- LCD animations : : 			
+
+			
  - Heart animationc : 
  ![heart](https://user-images.githubusercontent.com/36522518/71325427-3dc30580-24f5-11ea-8ac9-deba078355c4.png)
 
 
 - Phantom animation :
+![phantom](https://user-images.githubusercontent.com/36522518/71325442-92668080-24f5-11ea-8a71-14f5c132326f.png)
 
+
+
+- how to play : 
+	 - you should use the joystick to navigate in menu and switch button from joystick
+	 to select a submenu
+	 - in start game -> joystick to move 
+	 - in credits and highscore - when0 selected will last enough time to read
+	 - in settings -> right or up to change difficulty , left or down more thant 4 seconds to come back to menu
+
+
+
+- harware component : 
+	- Used : 
+		- 2 led matrixes
+		- 2 drivers
+		- 1 lcd
+		- 3 resistors
+		- a lot of cables
+		- 1 joystick
+		- 4 breadboards
+	 - Upgrade (maybe ) :
+		- loudspeaker
+		- more cables
+		- 1 resistor
+		- leds
+		- buttons
+		
+
+ - hardware scheme : 
+ 	![hardwareModel](https://user-images.githubusercontent.com/36522518/71325459-eec9a000-24f5-11ea-9e81-cc8e9afef552.jpg)
+
+ 	
+
+	
