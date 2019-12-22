@@ -43,3 +43,10 @@ Strange Pacman game :
 			- ciphers
 			- codes for bigger score in game
 			- funny animations
+			
+ - Heart animationc : 
+ ![heart](https://user-images.githubusercontent.com/36522518/71325427-3dc30580-24f5-11ea-8ac9-deba078355c4.png)
+
+
+- Phantom animation :
+
