@@ -12,7 +12,7 @@
         - Arduino Uno
         - lots of wires
         
-        ![rgb](https://user-images.githubusercontent.com/36522518/75095808-979d8580-55a1-11ea-83ac-4cf76ff03920.jpg)
+          https://user-images.githubusercontent.com/36522518/75095808-979d8580-55a1-11ea-83ac-4cf76ff03920.jpg
         ![driver](https://user-images.githubusercontent.com/36522518/75095809-9bc9a300-55a1-11ea-8ea4-35935afa3150.jpg)
         ![wires](https://user-images.githubusercontent.com/36522518/75095810-9cfad000-55a1-11ea-86ba-5408be3409c9.jpg)
 
