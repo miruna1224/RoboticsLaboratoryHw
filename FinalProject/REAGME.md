@@ -41,7 +41,7 @@
   4.) Hardware part :  
        
        - i designed an electrical scheme on Tinker ( the exported project can be found in repo under the name "SchemaElectrica" : 
-        <img width="228" alt="arrowTopLeftCorner" src="https://user-images.githubusercontent.com/46327732/71313715-37755080-2445-11ea-9ebd-b2761d3d1fce.png">
+        <img width="228" alt="arrowTopLeftCorner" src="https://user-images.githubusercontent.com/36522518/75171371-31953780-5734-11ea-9853-bf0b21205243.png">
          
         - example of others electrical schemes:
           ![new cube](https://user-images.githubusercontent.com/36522518/75095772-3d9cc000-55a1-11ea-8e69-60c5054f316b.png)
