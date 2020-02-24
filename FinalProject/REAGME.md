@@ -11,8 +11,8 @@
         - pushbutton x48
         - Arduino Uno
         - lots of wires
-        
-          https://user-images.githubusercontent.com/36522518/75095808-979d8580-55a1-11ea-83ac-4cf76ff03920.jpg
+
+        ![alt text](https://user-images.githubusercontent.com/36522518/75095808-979d8580-55a1-11ea-83ac-4cf76ff03920.jpg)
         ![driver](https://user-images.githubusercontent.com/36522518/75095809-9bc9a300-55a1-11ea-8ea4-35935afa3150.jpg)
         ![wires](https://user-images.githubusercontent.com/36522518/75095810-9cfad000-55a1-11ea-86ba-5408be3409c9.jpg)
 
@@ -41,7 +41,7 @@
   4.) Hardware part :  
        
        - i designed an electrical scheme on Tinker ( the exported project can be found in repo under the name "SchemaElectrica" : 
-       ![FaceSchemeSnap](https://user-images.githubusercontent.com/36522518/75095720-8c962580-55a0-11ea-9b5d-49bfd07949b7.png)
+          ![FaceSchemeSnap](https://user-images.githubusercontent.com/36522518/75170008-217c5880-5732-11ea-9ea3-b7623dbb749e.png)
 
         - example of others electrical schemes:
           ![new cube](https://user-images.githubusercontent.com/36522518/75095772-3d9cc000-55a1-11ea-8e69-60c5054f316b.png)
