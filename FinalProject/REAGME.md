@@ -40,8 +40,7 @@
   
   4.) Hardware part :  
        
-       - i designed an electrical scheme on Tinker ( the exported project can be found in repo under the name "SchemaElectrica" : 
-          https://github.com/miruna1224/RoboticsLaboratoryHw/issues/3#issue-569975414
+       - i designed an electrical scheme on Tinker ( the exported project can be found in repo under the name "SchemaElectrica" : https://github.com/miruna1224/RoboticsLaboratoryHw/blob/master/FinalProject/images/SchemaElectrica.png
          
         - example of others electrical schemes:
           ![new cube](https://user-images.githubusercontent.com/36522518/75095772-3d9cc000-55a1-11ea-8e69-60c5054f316b.png)
