@@ -55,7 +55,17 @@
           - final one should look like this :
    ![](https://user-images.githubusercontent.com/36522518/75095785-5b6a2500-55a1-11ea-8adf-aa965e1b8843.jpg)
 
-          
+          - i changed the initial plan because of a cold soldering which ruined it ( and other electrical scheme bugs )
+          - i ordered new boards designed after a new electrical scheme and these are my new prototypes :
+               - this is the new electrical scheme
+   ![](https://user-images.githubusercontent.com/36522518/76025453-a6871f00-5f35-11ea-93b0-50c0c85ee635.jpg)
+   
+              - these are the hardware cube faces ( in progress )
+ ![](https://user-images.githubusercontent.com/36522518/76025450-a5ee8880-5f35-11ea-9982-2faabb398e1f.jpg)
+![](https://user-images.githubusercontent.com/36522518/76025459-a7b84c00-5f35-11ea-95ea-b0cb717f9d05.jpg)
+![](https://user-images.githubusercontent.com/36522518/76025460-a850e280-5f35-11ea-9fde-95145c1dbf1e.jpg)
+![](https://user-images.githubusercontent.com/36522518/76025461-a8e97900-5f35-11ea-9bdf-0d699b8f288e.jpg)
+
         
     
    - 5.) Tutorials :
