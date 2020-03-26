@@ -79,8 +79,3 @@
 
 
 
-
-
-/// aici vreau sa adaug noua imagine
-
-![](https://user-images.githubusercontent.com/36522518/77663350-a3f07600-6f85-11ea-93cf-ccbfdff4aeab.jpg)
