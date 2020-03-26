@@ -74,3 +74,13 @@
             - https://create.arduino.cc/projecthub/ArduinoKoen/rubik-s-cube-bc1b50
             - https://blog.adafruit.com/2015/05/25/led-rubiks-cube-with-arduino/
             - https://www.htxt.co.za/2017/10/25/try-and-solve-the-rubiks-cube-thats-also-an-arduino-led-lamp/
+
+
+
+
+
+
+
+/// aici vreau sa adaug noua imagine
+
+![](https://user-images.githubusercontent.com/36522518/77663350-a3f07600-6f85-11ea-93cf-ccbfdff4aeab.jpg)
